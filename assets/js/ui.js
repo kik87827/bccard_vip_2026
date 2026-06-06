@@ -34,6 +34,25 @@ const uiBase = {
       document.querySelector("html").classList.add(opt);
     }
   },
+  layoutEvent() {
+    footerEvent();
+    function footerEvent() {
+      $(".drop_event_target").on("click", function (e) {
+        e.preventDefault();
+
+        const $item = $(this).closest(".drop_box_item");
+
+        $(".drop_box_item").not($item).removeClass("active");
+        $item.toggleClass("active");
+      });
+
+      $(document).on("click", function (e) {
+        if (!$(e.target).closest(".drop_box_item").length) {
+          $(".drop_box_item").removeClass("active");
+        }
+      });
+    }
+  },
   setVhProperty() {
     setProperty();
     window.addEventListener("resize", () => {
