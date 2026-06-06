@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* default */
+@import url('webfont.css');
+* {margin:0;padding:0;outline:0;word-break:keep-all; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -o-text-size-adjust: none; -ms-text-size-adjust: none; text-size-adjust:none; -webkit-tap-highlight-color: rgba(255,255,255,0);}
+body {font-family: 'Pretendard',Dotum,verdana,sans-serif;font-size:12px;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, address, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td, header, footer, nav, menu, section, article, aside, main, video {margin:0;padding:0;border:0;vertical-align:baseline;}
+header, footer, section, article, aside, nav, main, details, menu, figure, figcaption, video {display:block;}
+table {border-collapse:collapse;border-spacing:0;word-wrap:break-word;word-break:break-all;}
+table th, table td {text-align:center;vertical-align:middle;font-weight:normal;font-family: 'Pretendard';}
+ol, ul, li {list-style: none outside none;}
+a {text-decoration:none; color:#333}
+a:hover, a:visited {text-decoration:none;}
+button{border:0;background:none;cursor:pointer;padding:0;font-family: 'Pretendard';}
+button span{position:relative;font-family: 'Pretendard';}
+select{font-family: 'Pretendard';}
+img {border:0 none; max-width:100%;}
+form input, form select, form label, form img {vertical-align: middle;}
+fieldset {border: 0 none;}
+em, address {font-style: normal;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+strong {font-weight:normal;}
+iframe {margin: 0; padding: 0;}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline;}
+input[type="text"], input[type="password"] {font-family: 'Pretendard';color:#000;border:1px solid #c8c8c8;-webkit-appearance: none;-moz-appearance: none;-webkit-border-radius: 0;}
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="password"]{-webkit-appearance:none;border-radius:0;font-family: 'Pretendard';color:#5d5d5d;-webkit-appearance: none;-moz-appearance: none;-webkit-border-radius: 0;}
+fieldset legend ,
+table caption {display:inline-block;width:0;height:0;overflow:hidden;line-height:0;color:transparent;position:absolute;top:0;left:-99999px;}
+textarea{font-family: 'Pretendard';color:#000;border:1px solid #c8c8c8;line-height:normal !important}
+
+input[type="text"]:focus, input[type="password"]:focus{border-color:#000;}
+
+::-webkit-input-placeholder{color:#7b7b7b;font-family: 'Pretendard';}
+::-moz-input-placeholder{color:#7b7b7b;font-family: 'Pretendard';}
+:-ms-input-placeholder{color:#7b7b7b;font-family: 'Pretendard';}
+::-ms-input-placeholder{color:#7b7b7b;font-family: 'Pretendard';}
+::input-placeholder{color:#7b7b7b;font-family: 'Pretendard';}
