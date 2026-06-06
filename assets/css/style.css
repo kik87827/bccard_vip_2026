@@ -156,3 +156,92 @@ html ::-webkit-scrollbar-track {
   .key_vcopy_sub{font-size:16px;}
 }
 /* // key visual */
+
+
+/* list */
+.card_item_wrap{}
+.card_item_list{}
+.card_item_list > li{}
+.card_item_list > li.parking{}
+.card_item{}
+.card_item .img_row{}
+.card_item .img_row .flag_wrap{}
+.card_item .img_row > img.card_thumb_img{}
+
+.card_item .spec_row{}
+.card_main_spec{}
+.card_sub_spec{}
+
+.parking_info_wrap{}
+.parking_copy_wrap{}
+.parking_main_copy{}
+.parking_sub_copy{}
+.parking_info_wrap{}
+/* // list */
+
+
+/* note */
+.info_note_wrap{}
+.info_note_inner{}
+.info_note_title_row{}
+.info_note_title{}
+.info_note_contents{}
+.info_note_contents .bullet_list{}
+.info_note_contents .bullet_list .bullet_list{}
+
+
+/* detail */
+.detail_ui_group{}
+.detail_top_wrap{}
+.detail_main_copy{}
+.detail_sub_copy{}
+.detail_dp_wrap{}
+.swiper.detail_dp_swiper{}
+.swiper.detail_dp_swiper .swiper-wrapper{}
+.swiper.detail_dp_swiper .swiper-slide{}
+.dp_img{}
+.dp_img img{}
+.detail_middle_wrap{}
+.detail_mid_title_row{}
+.detail_mid_title{}
+.detail_mid_contents{}
+.detail_look_wrap{}
+.detail_look_list{}
+.detail_look_list > li{}
+.detail_cell{}
+.detail_cell.define_th{}
+.detail_cell.define_td{}
+.detail_key_node{}
+.detail_data_node{}
+.map_info_wrap{}
+.map_info_wrap > li{}
+.map_info_wrap > li:last-of-type{}
+.map_info_item{}
+.map_each_container{}
+.map_each_container > .liquid{}
+.map_each_container > .auto{}
+.map_each_container > .auto .btn_rolebox{}
+.map_slice_list{}
+.map_slice_list > li{}
+.map_slice_list > li:last-of-type{}
+.map_slice_item{}
+.map_slice_item > .ico{}
+.map_slice_item > .ico.shape_marker{}
+.map_slice_item > .ico.shape_call{}
+.map_slice_item > .text_node{}
+
+.map_info_item{}
+.map_info_para{}
+
+.detail_data_node{}
+.highlight_blue,
+.highlight_blue *{}
+
+
+.card_plate_wrap{}
+.card_plate_list{}
+.card_plate_list > li{}
+.card_plate_item .img_cols{}
+.card_plate_item .img_cols > img{}
+.card_plate_item .spec_cols{}
+.card_plate_name{}
