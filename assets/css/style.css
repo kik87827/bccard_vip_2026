@@ -137,3 +137,22 @@ html ::-webkit-scrollbar-track {
   .footer_copy_list > li:after{display:none;}
 }
 /* // layout */
+
+/* key visual */
+.key_visual_wrap{position:relative; display:flex; justify-content: center; align-items: center; min-height:410px; box-sizing: border-box;}
+.key_bg{position:absolute;top:0;left:0;width:100%;height:100%;background-position:50% 50%;background-repeat:no-repeat;background-size:cover;}
+.key_bg.pc{display:block;}
+.key_bg.mb{display:none;}
+.key_vcopy_wrap{padding:24px; text-align: center; position:relative;}
+.key_vcopy_main,
+.key_vcopy_sub{color:#fff; line-height:1.3;}
+.key_vcopy_main{font-size:42px; font-weight:700;}
+.key_vcopy_sub{font-size:18px; margin-top:10px;}
+@media (max-width:767px){
+  .key_visual_wrap{min-height:260px;}
+  .key_bg.pc{display:none;}
+  .key_bg.mb{display:block;}
+  .key_vcopy_main{font-size:28px;}
+  .key_vcopy_sub{font-size:16px;}
+}
+/* // key visual */
