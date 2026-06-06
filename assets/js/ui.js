@@ -36,14 +36,29 @@ const uiBase = {
   },
   layoutEvent() {
     footerEvent();
+
     function footerEvent() {
+      $(".btn_topgo").on("click", function (e) {
+        e.preventDefault();
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 20);
+      });
+
+      $(".footer_article_target").on("click", function (e) {
+        $(this).toggleClass("active");
+        $(".footer_article_content").toggleClass("mb_active");
+      });
+
       $(".drop_event_target").on("click", function (e) {
         e.preventDefault();
-
         const $item = $(this).closest(".drop_box_item");
-
         $(".drop_box_item").not($item).removeClass("active");
         $item.toggleClass("active");
+      });
+
+      $(window).on("resize", function () {
+        pcAction();
       });
 
       $(document).on("click", function (e) {
@@ -51,6 +66,12 @@ const uiBase = {
           $(".drop_box_item").removeClass("active");
         }
       });
+      pcAction();
+      function pcAction() {
+        if ($(window).width() >= 768) {
+          $(".footer_article_content, .footer_article_target").removeClass("mb_active active");
+        }
+      }
     }
   },
   setVhProperty() {
