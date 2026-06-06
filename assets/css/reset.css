@@ -37,3 +37,14 @@ input[type="text"]:focus, input[type="password"]:focus{border-color:#000;}
 :-ms-input-placeholder{color:#7b7b7b;font-family: 'Pretendard';}
 ::-ms-input-placeholder{color:#7b7b7b;font-family: 'Pretendard';}
 ::input-placeholder{color:#7b7b7b;font-family: 'Pretendard';}
+.hdtext {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  line-height: 0;
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: -99999px;
+}
