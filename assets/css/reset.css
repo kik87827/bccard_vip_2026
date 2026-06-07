@@ -48,3 +48,5 @@ input[type="text"]:focus, input[type="password"]:focus{border-color:#000;}
   top: 0;
   left: -99999px;
 }
+
+.touchDis{touch-action: none;overflow:hidden;position:relative;}

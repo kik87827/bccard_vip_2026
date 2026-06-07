@@ -97,23 +97,26 @@
           <div class="data_sort_container">
             <ul class="data_sort_list">
               <li>
-                <div class="combo_select_item">
+                <div class="combo_select_item" id="foodCategory">
                   <button class="combo_select_current"><span class="text_node">푸드 카테고리 전체</span></button>
                   <div class="combo_option_wrap">
+                    <div class="dim"></div>
                     <ul class="combo_option_list">
                       <li><a href="#" class="combo_option" data-value="0">푸드 카테고리 전체</a></li>
                       <li><a href="#" class="combo_option" data-value="1">American</a></li>
                       <li><a href="#" class="combo_option" data-value="2">Asian</a></li>
                       <li><a href="#" class="combo_option" data-value="3">Bar</a></li>
                       <li><a href="#" class="combo_option" data-value="4">Buffet</a></li>
+                      <li><a href="#" class="combo_option" data-value="5">option 5</a></li>
                     </ul>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="combo_select_item">
+                <div class="combo_select_item" id="localCategory">
                   <button class="combo_select_current"><span class="text_node">지역 전체</span></button>
                   <div class="combo_option_wrap">
+                    <div class="dim"></div>
                     <ul class="combo_option_list">
                       <li><a href="#" class="combo_option" data-value="0">지역 전체</a></li>
                       <li><a href="#" class="combo_option" data-value="1">option 1</a></li>
@@ -124,24 +127,11 @@
                 </div>
               </li>
               <li>
-                <div class="combo_select_item">
-                  <button class="combo_select_current"><span class="text_node">상세 지역</span></button>
-                  <div class="combo_option_wrap">
-                    <ul class="combo_option_list">
-                      <li><a href="#" class="combo_option" data-value="0">상세 지역</a></li>
-                      <li><a href="#" class="combo_option" data-value="1">option 1</a></li>
-                      <li><a href="#" class="combo_option" data-value="2">option 2</a></li>
-                      <li><a href="#" class="combo_option" data-value="3">option 3</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="combo_select_item">
+                <div class="combo_select_item" id="popularCategory">
                   <button class="combo_select_current"><span class="text_node">인기순</span></button>
                   <div class="combo_option_wrap">
+                    <div class="dim"></div>
                     <ul class="combo_option_list">
-                      <li><a href="#" class="combo_option" data-value="0">인기순</a></li>
                       <li><a href="#" class="combo_option" data-value="1">option 1</a></li>
                       <li><a href="#" class="combo_option" data-value="2">option 2</a></li>
                       <li><a href="#" class="combo_option" data-value="3">option 3</a></li>
@@ -286,8 +276,8 @@
           </div>
           <!-- paging -->
           <div class="paging_wrap">
-            <a href="#none" class="paging_control first disabled"><span class="hdtext">처음 목록으로 이동</span></a>
-            <a href="#none" class="paging_control prev disabled"><span class="hdtext">이전 목록으로 이동</span></a>
+            <a href="#none" class="paging_control first"><span class="hdtext">처음 목록으로 이동</span></a>
+            <a href="#none" class="paging_control prev"><span class="hdtext">이전 목록으로 이동</span></a>
             <div class="paging_number_group">
               <a href="#none" class="paging_number active">1</a>
               <a href="#none" class="paging_number">2</a>
@@ -329,6 +319,23 @@
           </div>
         </div>
       </main>
+      <script>
+        $(function () {
+          comboBox({
+            change: {
+              foodCategory: function (data) {
+                console.log("foodCategory", data.value, data.text);
+              },
+              localCategory: function (data) {
+                console.log("localCategory", data.value, data.text);
+              },
+              popularCategory: function (data) {
+                console.log("popularCategory", data.value, data.text);
+              },
+            },
+          });
+        });
+      </script>
       <footer class="footer_section">
         <div class="footer_inner">
           <div class="footer_main_row">

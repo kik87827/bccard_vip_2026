@@ -427,3 +427,257 @@ function resizeAction(callback) {
     windowWid = window.innerWidth;
   });
 }
+
+function comboBox(options) {
+  options = options || {};
+
+  var comboIdx = 0;
+  var $pageWrap = $(".page_wrap");
+  var changeCallbacks = options.change || {};
+
+  function syncComboWidth($combo) {
+    var $button = $combo.find(".combo_select_current");
+    var $layer = $combo.find(".combo_option_wrap");
+    var $list = $combo.find(".combo_option_list");
+    var buttonWidth;
+    var optionMaxWidth = 0;
+    var currentSavedWidth = $combo.data("combo-width") || 0;
+    var comboWidth;
+
+    // 측정할 때만 기존 width 해제
+    $combo.css("width", "");
+    $button.css("width", "");
+    $layer.css("width", "");
+    $list.css("width", "");
+
+    buttonWidth = $button.outerWidth();
+
+    $combo.find(".combo_option").each(function () {
+      var optionWidth = $(this).outerWidth();
+
+      if (optionWidth > optionMaxWidth) {
+        optionMaxWidth = optionWidth;
+      }
+    });
+
+    // 핵심: 기존 최대값 / 버튼값 / 옵션최대값 중 가장 큰 값 사용
+    comboWidth = Math.max(currentSavedWidth, buttonWidth, optionMaxWidth);
+
+    $combo.css("width", comboWidth);
+    $button.css("width", comboWidth);
+    $layer.css("width", comboWidth);
+    $list.css("width", comboWidth);
+
+    $combo.data("combo-width", comboWidth);
+  }
+
+  $(".combo_select_item").each(function () {
+    var $combo = $(this);
+    var $activeOption = $combo.find(".combo_option.active");
+
+    if ($activeOption.length) {
+      $combo.find(".text_node").text($activeOption.text());
+    }
+
+    if (!this.id) {
+      this.id = "combo_" + ++comboIdx;
+    }
+
+    if (!$combo.attr("data-optionLength")) {
+      $combo.attr("data-optionLength", "5");
+    }
+
+    syncComboWidth($combo);
+  });
+
+  function setComboLayerPosition() {
+    var $layer = $(".combo_option_wrap.open");
+
+    if (!$layer.length) return;
+
+    var comboId = $layer.data("combo-id");
+    var $combo = $("#" + comboId);
+    var $button = $combo.find(".combo_select_current");
+
+    if (!$button.length) return;
+
+    var buttonOffset = $button.offset();
+    var pageOffset = $pageWrap.offset();
+
+    $layer.css({
+      left: buttonOffset.left - pageOffset.left + $pageWrap.scrollLeft(),
+      top: buttonOffset.top - pageOffset.top + $pageWrap.scrollTop() + $button.outerHeight(),
+      width: $combo.data("combo-width"),
+    });
+  }
+
+  function setOptionScroll($combo, $layer) {
+    var maxOptionLength = parseInt($combo.attr("data-optionLength"), 10) || 5;
+    var $list = $layer.find(".combo_option_list");
+    var $options = $list.find(".combo_option");
+    var optionCount = $options.length;
+
+    $list.css({
+      maxHeight: "",
+      overflowY: "",
+      width: $combo.data("combo-width"),
+    });
+
+    if (optionCount > maxOptionLength) {
+      var optionHeight = $options.first().outerHeight();
+
+      $list.css({
+        maxHeight: optionHeight * maxOptionLength + 10,
+        overflowY: "auto",
+      });
+    }
+  }
+
+  function closeComboLayer() {
+    $(".combo_option_wrap.open").each(function () {
+      var $layer = $(this);
+      var comboId = $layer.data("combo-id");
+      var $combo = $("#" + comboId);
+
+      $combo.removeClass("active").append($layer.removeClass("open"));
+    });
+    $("html,body").removeClass("touchDis");
+  }
+
+  $(document).on("click", ".combo_select_current", function (e) {
+    e.preventDefault();
+
+    var $combo = $(this).closest(".combo_select_item");
+    var $layer = $combo.find(".combo_option_wrap");
+    var isOpened = $combo.hasClass("active");
+
+    closeComboLayer();
+
+    if (isOpened) return;
+
+    syncComboWidth($combo);
+
+    $combo.addClass("active");
+
+    $layer
+      .data("combo-id", $combo.attr("id"))
+      .appendTo($pageWrap)
+      .css({
+        position: "absolute",
+        width: $combo.data("combo-width"),
+        zIndex: 1000,
+      })
+      .addClass("open");
+
+    setOptionScroll($combo, $layer);
+    setComboLayerPosition();
+    $("html,body").addClass("touchDis");
+  });
+
+  $(document).on("click", ".combo_option", function (e) {
+    e.preventDefault();
+
+    var $option = $(this);
+    var $layer = $option.closest(".combo_option_wrap");
+    var comboId = $layer.data("combo-id");
+    var $combo = $("#" + comboId);
+
+    $layer.find(".combo_option.active").removeClass("active");
+    $option.addClass("active");
+
+    $combo.find(".text_node").text($option.text());
+
+    // 핵심: change 후 current 텍스트 기준으로 width 재동기화
+    syncComboWidth($combo);
+
+    var data = {
+      comboId: comboId,
+      value: $option.data("value"),
+      text: $option.text(),
+      option: $option,
+      combo: $combo,
+    };
+
+    if (typeof changeCallbacks[comboId] === "function") {
+      changeCallbacks[comboId](data);
+    }
+
+    if (typeof changeCallbacks.all === "function") {
+      changeCallbacks.all(data);
+    }
+
+    $combo.trigger("combo:change", data);
+
+    $combo.removeClass("active").append($layer.removeClass("open"));
+    $("html,body").removeClass("touchDis");
+  });
+
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".combo_select_item").length && !$(e.target).closest(".combo_option_wrap").length) {
+      closeComboLayer();
+    }
+  });
+
+  $(".combo_option_wrap .dim").on("click", function (e) {
+    closeComboLayer();
+  });
+
+  $(window).on("resize scroll", function () {
+    setComboLayerPosition();
+  });
+
+  $pageWrap.on("scroll", function () {
+    setComboLayerPosition();
+  });
+}
+
+function detailSwiper() {
+  let swiper = null;
+  let resizeTimer = null;
+
+  function mobileSwiper() {
+    const mobile = window.innerWidth <= 767;
+
+    if (mobile && !swiper) {
+      swiper = new Swiper(".detail_dp_swiper", {
+        slidesPerView: 1,
+        loop: true,
+
+        navigation: {
+          nextEl: ".detail_dp_swiper .swiper-button-next",
+          prevEl: ".detail_dp_swiper .swiper-button-prev",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    }
+
+    if (!mobile && swiper) {
+      swiper.destroy(true, true);
+      swiper = null;
+
+      $(".detail_dp_swiper").removeClass("swiper-initialized swiper-horizontal swiper-backface-hidden").removeAttr("style");
+
+      $(".detail_dp_swiper .swiper-wrapper, .detail_dp_swiper .swiper-slide").removeAttr("style");
+
+      $(".detail_dp_swiper .swiper-button-next,.detail_dp_swiper .swiper-button-prev").removeClass("swiper-button-disabled swiper-button-lock").removeAttr("style");
+
+      $(".detail_dp_swiper .swiper-pagination").removeClass("swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock").empty().removeAttr("style");
+    }
+  }
+
+  $(window).on("load", function () {
+    mobileSwiper();
+  });
+
+  $(window).on("resize", function () {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(function () {
+      mobileSwiper();
+    }, 150);
+  });
+}

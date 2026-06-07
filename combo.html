@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+    <link href="./assets/css/swiper.min.css" rel="stylesheet" />
+    <link href="./assets/css/components.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/ui.js"></script>
+    <title></title>
+  </head>
+
+  <body class="front_body">
+    <div class="page_wrap">
+      <div style="max-width: 1200px; padding: 300px 30px; margin: 0 auto">
+        <div class="combo_select_item" id="foodCategory">
+          <button class="combo_select_current"><span class="text_node">푸드 카테고리 전체</span></button>
+          <div class="combo_option_wrap">
+            <div class="dim"></div>
+            <ul class="combo_option_list">
+              <li><a href="#" class="combo_option" data-value="0">푸드 카테고리 전체</a></li>
+              <li><a href="#" class="combo_option" data-value="1">American</a></li>
+              <li><a href="#" class="combo_option" data-value="2">Asian</a></li>
+              <li><a href="#" class="combo_option" data-value="3">Bar</a></li>
+              <li><a href="#" class="combo_option" data-value="4">Buffet</a></li>
+              <li><a href="#" class="combo_option" data-value="5">option 5</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="combo_select_item" id="localCategory">
+          <button class="combo_select_current"><span class="text_node">지역 전체</span></button>
+          <div class="combo_option_wrap">
+            <div class="dim"></div>
+            <ul class="combo_option_list">
+              <li><a href="#" class="combo_option" data-value="0">지역 전체</a></li>
+              <li><a href="#" class="combo_option" data-value="1">option 1</a></li>
+              <li><a href="#" class="combo_option" data-value="2">option 2</a></li>
+              <li><a href="#" class="combo_option" data-value="3">option 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        comboBox({
+          change: {
+            foodCategory: function (data) {
+              console.log("foodCategory", data.value, data.text);
+            },
+            localCategory: function (data) {
+              console.log("localCategory", data.value, data.text);
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
