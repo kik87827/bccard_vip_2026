@@ -2,9 +2,9 @@
 
 
 .front_body{}
-.page_wrap{display:flex;flex-direction: column;min-height:calc(var(--vh) * 100); min-width:280px;}
+.page_wrap{display:flex;flex-direction: column;min-height:calc(var(--vh) * 100); min-width:280px; padding-top:70px;}/* 260615 수정 */
 
-.header_section{background:#111; position:sticky;top:0;left:0;width:100%; z-index: 20;}
+.header_section{background:#111; position:fixed;top:0;left:0;width:100%; z-index: 20;}/* 260615 수정 */
 .header_inner{display:flex; justify-content: center; align-items: center; height:70px; max-width:1200px; margin:0 auto; padding:0 30px;}
 .header_logo_cols{}
 .header_toplogo{display:inline-flex; vertical-align: top;}
@@ -105,6 +105,8 @@
 .btn_topgo:after{display:block; content:''; width:24px; height:24px; background:url("../images/ico_topgo.png") no-repeat 0 0/100% auto;}
 
 @media (max-width:767px){
+  .page_wrap{padding-top:56px;}/* 260615 추가 */
+  .header_section{}/* 260615 추가 */
   .header_inner{height:56px; padding:0 56px;}
   .toplogo_link{align-items: center;}
   .toplogo_img{max-width:96px;}

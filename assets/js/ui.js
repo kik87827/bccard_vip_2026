@@ -79,8 +79,9 @@ const uiBase = {
         mobile_panel_zone = document.querySelector(".mobile_panel_zone"),
         mobile_panel_dim = document.querySelector(".mobile_panel_dim"),
         btn_mbmenuclose = document.querySelector(".btn_mbmenuclose"),
-        mobile_mainmenu_wrap = document.querySelector(".mobile_mainmenu_wrap");
-      ((domHtml = document.querySelector("html")), (domBody = document.querySelector("body")));
+        mobile_mainmenu_wrap = document.querySelector(".mobile_mainmenu_wrap") /* 260615 수정 */,
+        domHtml = document.querySelector("html") /* 260615 수정 */,
+        domBody = document.querySelector("body"); /* 260615 수정 */
 
       // init
       if (mobile_panel_zone === null) {
@@ -92,7 +93,7 @@ const uiBase = {
           e.preventDefault();
           totalOpen();
         },
-        false,
+        false /* 260615 수정 */
       );
       btn_mbmenuclose?.addEventListener(
         "click",
@@ -100,7 +101,7 @@ const uiBase = {
           e.preventDefault();
           totalClose();
         },
-        false,
+        false /* 260615 수정 */
       );
       mobile_panel_dim?.addEventListener(
         "click",
@@ -108,7 +109,7 @@ const uiBase = {
           e.preventDefault();
           totalClose();
         },
-        false,
+        false /* 260615 수정 */
       );
       resizeAction(() => {
         if (window.innerWidth > 1440) {
@@ -190,7 +191,7 @@ class DesignPopup {
             e.preventDefault();
             this.popupHide(this.selector);
           },
-          false,
+          false /* 260615 수정 */
         );
       });
     }
@@ -571,7 +572,11 @@ function comboBox(options) {
 
     setOptionScroll($combo, $layer);
     setComboLayerPosition();
-    $("html,body").addClass("touchDis");
+    /* 260615 수정 */
+    if ($("html").hasClass("touchmode")) {
+      $("html,body").addClass("touchDis");
+    }
+    /* // 260615 수정 */
   });
 
   $(document).on("click", ".combo_option", function (e) {
