@@ -131,20 +131,34 @@
 
 /* key visual */
 .key_visual_wrap{position:relative; display:flex; justify-content: center; align-items: center; min-height:410px; box-sizing: border-box;}
-.key_bg{position:absolute;top:0;left:0;width:100%;height:100%;background-position:50% 50%;background-repeat:no-repeat;background-size:cover;}
+/* .key_visual_wrap:before{display:block;content:'';width:100%;height:150px;background:#000;position: absolute;top:0;left:0;z-index:1;background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);} */
+.key_visual_wrap:after{display:block;content:'';width:100%;height:100%;background:#000;opacity:.6;position: absolute;top:0;left:0;z-index:2;}
+.key_bg{position:absolute;top:0;left:0;width:100%;height:100%;background-position:50% 50%;background-repeat:no-repeat;background-size:cover;z-index:0;}
 .key_bg.pc{display:block;}
 .key_bg.mb{display:none;}
-.key_vcopy_wrap{padding:24px; text-align: center; position:relative;}
+.key_vcopy_wrap{padding:24px; text-align: center; position:relative; z-index:5;}
 .key_vcopy_main,
 .key_vcopy_sub{color:#fff; line-height:1.3;}
 .key_vcopy_main{font-size:42px; font-weight:700;}
 .key_vcopy_sub{font-size:18px; margin-top:10px;}
+.key_bread_layer_wrap{min-height:150px; position:absolute;top:0;left:0; z-index:6; width:100%;background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%); box-sizing: border-box;padding:10px 0;}
+.key_bread_list{max-width:1200px;margin:0 auto;padding:0 30px; display:flex; gap:20px; justify-content: flex-end; align-items: center;}
+.key_bread_list > li{position:relative;}
+.key_bread_list > li:after{
+  display:block; content:''; width:12px;height:12px; background:url("../images/icon_bread.svg") no-repeat 50% 50%/100% auto; position:absolute; top:50%;right:-16px; transform: translate(0,-50%);
+}
+.key_bread_list > li:last-of-type:after{display:none;}
+.key_bread_item{color:#BDBDBD; display:inline-block; font-size:14px;}
+.key_bread_item.highlight{color:#fff; font-weight:500;}
 @media (max-width:767px){
+  .key_visual_wrap:after{opacity: .5;}
   .key_visual_wrap{min-height:260px;}
   .key_bg.pc{display:none;}
   .key_bg.mb{display:block;}
   .key_vcopy_main{font-size:28px;}
   .key_vcopy_sub{font-size:16px;}
+
+  .key_bread_layer_wrap{display:none;}
 }
 /* // key visual */
 

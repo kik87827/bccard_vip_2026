@@ -50,3 +50,9 @@ input[type="text"]:focus, input[type="password"]:focus{border-color:#000;}
 }
 
 .touchDis{touch-action: none;overflow:hidden;position:relative;}
+
+.mb_br{display:none !important;}
+
+@media (max-width:767px){
+  .mb_br{display:block !important;}
+}
