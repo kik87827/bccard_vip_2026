@@ -67,9 +67,65 @@ const uiBase = {
         }
       });
       pcAction();
+      footerBreak();
       function pcAction() {
         if ($(window).width() >= 768) {
           $(".footer_article_content, .footer_article_target").removeClass("mb_active active");
+        }
+      }
+
+      function footerBreak() {
+        const list = document.querySelector(".footer_link_list");
+
+        if (!list) return;
+
+        const CLASS_NAME = "break";
+
+        const update = () => {
+          const items = [...list.children];
+
+          if (!items.length) return;
+
+          // 초기화
+          items.forEach((item) => item.classList.remove(CLASS_NAME));
+
+          // 줄 마지막 li에 break 추가
+          for (let i = 1; i < items.length; i++) {
+            if (items[i].offsetTop !== items[i - 1].offsetTop) {
+              items[i - 1].classList.add(CLASS_NAME);
+            }
+          }
+
+          // 마지막 줄 마지막 li
+          items[items.length - 1].classList.add(CLASS_NAME);
+        };
+
+        // debounce
+        let timer;
+        const debounceUpdate = () => {
+          clearTimeout(timer);
+          timer = setTimeout(update, 50);
+        };
+
+        // 최초 실행
+        requestAnimationFrame(update);
+
+        // ResizeObserver 지원
+        if ("ResizeObserver" in window) {
+          const observer = new ResizeObserver(debounceUpdate);
+          observer.observe(list);
+        }
+
+        // fallback
+        window.addEventListener("resize", debounceUpdate);
+
+        // DOM 변경 대응(li 추가/삭제)
+        if ("MutationObserver" in window) {
+          const mutation = new MutationObserver(debounceUpdate);
+          mutation.observe(list, {
+            childList: true,
+            subtree: false,
+          });
         }
       }
     }

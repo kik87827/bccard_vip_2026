@@ -119,6 +119,7 @@
   .footer_inner{padding:24px 20px 40px;}
   .footer_copy_row{margin-top:0; align-items: flex-end;}
   .footer_link_list{margin-right:-66px; gap:10px 17px;}
+  .footer_link_list > li.break:after{display:none;}
   .footer_article_content{margin-top:10px; display:none;}
   .footer_article_content.mb_active{display:block;}
   .footer_article_target{display:inline-flex; align-items: center; gap:3px;}
