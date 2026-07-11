@@ -6,6 +6,7 @@
 
 .header_section{background:#111; position:fixed;top:0;left:0;width:100%; z-index: 20;}/* 260615 수정 */
 .header_inner{display:flex; justify-content: center; align-items: center; height:70px; max-width:1200px; margin:0 auto; padding:0 30px;}
+.header_inner.type2{justify-content: flex-start;}
 .header_logo_cols{}
 .header_toplogo{display:inline-flex; vertical-align: top;}
 .toplogo_link{display:inline-flex; align-items: flex-end;}
@@ -152,7 +153,7 @@
 .key_bread_item.highlight{color:#fff; font-weight:500;}
 @media (max-width:767px){
   .key_visual_wrap:after{opacity: .5;}
-  .key_visual_wrap{min-height:260px;}
+  .key_visual_wrap{min-height:320px;}
   .key_bg.pc{display:none;}
   .key_bg.mb{display:block;}
   .key_vcopy_main{font-size:32px;}
