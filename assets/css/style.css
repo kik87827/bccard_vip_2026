@@ -260,9 +260,9 @@
 .detail_look_list > li.has_line .detail_cell{border-bottom:1px solid rgba(0,0,0,.05);padding-bottom:35px;}
 .detail_look_list > li.has_line + li .detail_cell{padding-top:35px;}
 .detail_cell{display:table-cell; padding:16px 0; vertical-align: top; /*border-bottom:1px solid rgba(0,0,0,.05);*/}
-.detail_cell.define_th{width:1px;white-space: nowrap;padding-right:110px;}
+.detail_cell.define_th{width:180px; padding-right:20px;}
 .detail_cell.define_td{}
-.detail_key_node{display:inline-block; font-weight:600; font-size:18px; color:#151515; white-space: nowrap;}
+.detail_key_node{display:inline-block; font-weight:600; font-size:18px; color:#151515;}
 .map_info_para,
 .detail_data_node{display:inline-block; font-size:16px; color:#222222;}
 .map_info_wrap{}
@@ -293,12 +293,20 @@
 
 .card_plate_wrap{}
 .card_plate_list{display:flex; flex-wrap:wrap; gap:8px;margin-right:-8px;}
-.card_plate_list > li{flex:0 0 calc(50% - 8px);}
+.card_plate_list > li{flex:0 0 calc(33.33333333333% - 8px); width:calc(33.33333333333% - 8px)}
 .card_plate_item{background:#FAFAFA; padding:12px 20px; display:flex; align-items: center; gap:20px; border-radius: 12px;}
-.card_plate_item .img_cols{flex:0 0 83px;}
+.card_plate_item .img_cols{flex:0 0 52px; width:52px;display:flex; flex-direction: column; justify-content: flex-start;}
 .card_plate_item .img_cols > img{vertical-align: top;}
 .card_plate_item .spec_cols{}
-.card_plate_name{display:block; font-size:16px; font-weight:600;}
+.card_plate_name{display:block; font-size:20px; font-weight:700; color:#222;}
+.card_plate_info{display:block; font-size:16px; color:#404040; margin-top:8px;}
+
+
+@media (max-width:1023px){
+  .card_plate_list > li{flex:0 0 calc(50% - 8px); width:calc(50% - 8px)}
+  .card_plate_name{font-size:18px;}
+  .card_plate_info{font-size:16px;}
+}
 
 @media (max-width:767px){
   .detail_ui_group{padding:40px 0 0;}
@@ -325,7 +333,7 @@
   .detail_cell.define_th{width:auto; padding:0; margin-bottom:10px;}
 
   .detail_cell.define_td{padding-top:0;}
-  .detail_key_node{white-space: normal; font-size:16px;}
+  .detail_key_node{font-size:18px;}
 
   .detail_look_list > li.has_line{border-bottom:1px solid rgba(0,0,0,.05);padding-bottom:35px}
 
@@ -345,7 +353,9 @@
   .card_plate_list{flex-wrap:nowrap; gap:8px;margin-right:0;}
   .card_plate_list > li{flex:0 0 260px;}
   .card_plate_item{border-radius: 12px;}
-  .card_plate_item .img_cols{flex:0 0 64px;}
+  .card_plate_item .img_cols{flex:0 0 40px;}
   .card_plate_item .spec_cols{}
   .card_plate_name{display:block; font-size:16px; font-weight:600;}
+
+  .card_plate_info{font-size:15px;}
 }
