@@ -1,6 +1,13 @@
 
 /* button */
+.btn_text{font-size: 16px; line-height:1.2;letter-spacing: -0.04em; border-bottom:1px solid #404040;color: #404040; display:inline-block; white-space: nowrap;}
 .btn_bottom_wrap{}
+.btn_bottom_block{display:flex; text-align: center; justify-content: center; margin-top:80px;}
+.btn_card{max-width: 350px; min-width:350px; min-height: 65px; box-sizing: border-box; border: 1px solid #D6D6D6;border-radius: 12px; display:flex;  justify-content: center; align-items: center;
+}
+.btn_card .text_node{
+    font-size:24px; color:#151515; display:inline-block; font-weight:500;
+}
 
 .btn_capsule{display:inline-flex; min-height:48px; background:#0E1013; border-radius: 100px; align-items: center; box-sizing: border-box; padding:10px 18px; gap:4px;}
 .btn_capsule .ico{display:inline-block; width:28px; height:22px; background-repeat: no-repeat; background-size:100% auto; background-position: 0 0;}
@@ -19,6 +26,12 @@
 }
 @media (max-width:767px){
     .btn_rolebox{border-radius: 12px;}
+    .btn_bottom_block{ margin-top:48px;}
+    .btn_card{flex:1 ;padding: 12px 16px; max-width: 100%; min-height: 48px; 
+    }
+    .btn_card .text_node{
+        font-size:18px;
+    }
 }
 
 /* 

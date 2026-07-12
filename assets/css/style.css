@@ -276,16 +276,15 @@
 .map_slice_list{}
 .map_slice_list > li{margin-bottom:10px;}
 .map_slice_list > li:last-of-type{margin-bottom:0;}
-.map_slice_item{display:flex; gap:8px;}
+.map_slice_item{display:flex; gap:8px; align-items: flex-start;}
 .map_slice_item > .ico{width:20px;height:20px;flex:0 0 20px; background-position: 0 0; background-size:100% auto; background-repeat: no-repeat;}
 .map_slice_item > .ico.shape_marker{background-image:url("../images/ico_marker.png");}
 .map_slice_item > .ico.shape_call{background-image:url("../images/ico_phone.png");}
-.map_slice_item > .text_node{display:inline-block; font-size:16px; color:#222222;}
-
-.map_info_item{}
+.map_slice_item > .text_node{display:inline-block; font-size:16px; color:#404040; line-height: 1.5; position:relative; top:-2px;}
+.map_slice_item .btn_text{ margin-left:4px;}
 .map_info_para{margin-bottom:16px;}
 
-.detail_data_node{font-size:16px;}
+/* .detail_data_node{font-weight:500;} */
 .detail_data_node + .indent_para_list{margin-top:5px}
 .highlight_blue,
 .highlight_blue *{color:#3A43BB;}
@@ -336,11 +335,10 @@
   .detail_look_list > li.has_line{}
   .detail_look_list > li.has_line .detail_cell{border-bottom:0;padding:0}
   .detail_look_list > li.has_line + li .detail_cell{padding-top:0;}
-  .map_info_para, .detail_data_node{font-size:15px;}
   .detail_cell{display:block;}
-  .detail_cell.define_th{width:auto; padding:0; margin-bottom:10px;}
+  .detail_cell.define_th{width:auto; padding:0; margin-bottom:14px;}
 
-  .detail_cell.define_td{padding-top:0;}
+  .detail_cell.define_td{padding-top:0; padding-bottom:0;}
   .detail_key_node{font-size:18px;}
 
   .detail_look_list > li.has_line{border-bottom:1px solid rgba(0,0,0,.05);padding-bottom:35px}
@@ -355,7 +353,8 @@
 
   .map_each_container > .auto{flex:0 0 100%;}
   .map_each_container > .auto .btn_rolebox{min-height:48px; display:block; min-width:0; text-align: center;}
-
+  
+  .map_info_item .btn_cell{flex:1;display:flex; justify-content: flex-end;}
 
   .card_plate_wrap{position:relative;overflow-x:auto;}
   .card_plate_list{flex-wrap:nowrap; gap:8px;margin-right:0;}
