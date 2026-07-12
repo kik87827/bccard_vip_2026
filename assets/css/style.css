@@ -225,8 +225,11 @@
 .info_note_contents .bullet_list.shape_dot > li{margin-bottom:12px;}
 .info_note_contents .bullet_list.shape_dot > li:last-of-type{margin-bottom:0;}
 .info_note_contents .bullet_list .bullet_list.shape_dash{margin-top:5px;}
+.color_highlight{color:#3A43BB; font-weight:400;}
 @media (max-width:767px){
+  .info_note_inner{ padding:40px 0 100px;}
   .info_note_wrap{margin-top:100px;}
+  .info_note_title{font-size:18px;}
 }
 
 /* detail */
