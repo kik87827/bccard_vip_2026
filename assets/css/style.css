@@ -301,6 +301,14 @@
 .card_plate_name{display:block; font-size:20px; font-weight:700; color:#222;}
 .card_plate_info{display:block; font-size:16px; color:#404040; margin-top:8px;}
 
+.emphasis_frame{background:#FAFAFA; border-radius: 16px; display:inline-flex; padding:17px 12px 15px; gap:10px; align-items: flex-start; min-height:20px; min-width:246px; box-sizing: border-box;}
+.emphasis_frame .ico{flex:0 0 20px; width:20px; height:20px; background-repeat: no-repeat; background-size:100% auto; background-position: 0 0; display:block;}
+.emphasis_frame .ico.shape_import{background-image:url("../images/ico_emp_import.png")}
+.emphasis_para{
+  font-size: 16px; line-height:1.5;letter-spacing: -0.04em;color: #151515; position:relative; top:-1px; vertical-align: top;
+}
+.emphasis_frame + .bullet_list{margin-top:12px;}
+
 
 @media (max-width:1023px){
   .card_plate_list > li{flex:0 0 calc(50% - 8px); width:calc(50% - 8px)}
@@ -358,4 +366,9 @@
   .card_plate_name{display:block; font-size:16px; font-weight:600;}
 
   .card_plate_info{font-size:15px;}
+
+  .emphasis_frame{display:flex; padding:16px 12px;  min-width:0; }
+  .emphasis_para{
+    top:0; vertical-align: top;
+  }
 }
