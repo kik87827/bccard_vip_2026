@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
@@ -95,24 +95,45 @@
         </div>
         <div class="middle_contents">
           <div class="detail_ui_group">
-            <div class="detail_middle_block">
-              <div class="detail_mid_title_row">
-                <h3 class="detail_mid_title">갤러리</h3>
-              </div>
-              <div class="detail_mid_contents">
-                <div class="detail_mid_copy">
-                  내추럴 8 스파이 파티룸은 클래식하고 프라이빗한 분위기 속에서 다양한 종류의 위스키, 칵테일 등 주류와 페어링 요리를 즐길 수 있는 공간입니다.
-                  <br />
-                  다양한 콘셉트의 파티룸으로 특별한 날을 위한 프라이빗 이벤트 장소로도 활용 가능합니다.
+            <div class="detail_top_wrap">
+              <h2 class="detail_main_copy">우리 땅의 좋은 재료로 제대로 차린 따뜻한 한상</h2>
+              <p class="detail_sub_copy">
+                텍스트를 입력하세요.
+                <br />
+                텍스트를 입력하세요.
+              </p>
+            </div>
+            <div class="detail_dp_wrap">
+              <div class="swiper detail_dp_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="dp_img"><img src="./assets/images/sample_384x216.png" alt="" /></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="dp_img"><img src="./assets/images/sample_384x216.png" alt="" /></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="dp_img"><img src="./assets/images/sample_384x216.png" alt="" /></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="dp_img"><img src="./assets/images/sample_384x216.png" alt="" /></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="dp_img"><img src="./assets/images/sample_384x216.png" alt="" /></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="dp_img"><img src="./assets/images/sample_384x216.png" alt="" /></div>
+                  </div>
                 </div>
-                <!-- gallery -->
-                <div class="gallery_swiper_container">
-                  <div style="display: flex; justify-content: center; align-items: center; text-align: center; background: #ddd; height: 570px">gallery</div>
+                <!-- 옵션 -->
+                <div class="swiper-options">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                 </div>
-                <!-- // gallery -->
               </div>
             </div>
-            <div class="detail_middle_block">
+            <div class="detail_middle_wrap">
               <div class="detail_mid_title_row">
                 <h3 class="detail_mid_title">이용안내</h3>
               </div>
@@ -383,7 +404,9 @@
         </div>
       </main>
       <script>
-        $(function () {});
+        $(function () {
+          detailSwiper();
+        });
       </script>
       <footer class="footer_section">
         <div class="footer_inner">
