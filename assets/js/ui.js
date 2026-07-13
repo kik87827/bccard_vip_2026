@@ -782,8 +782,8 @@ function detailGallerySwiper() {
 
       mousewheel: {
         enabled: !isMobile,
-        forceToAxis: true,
-        releaseOnEdges: true,
+        //   forceToAxis: true,
+        releaseOnEdges: false,
       },
 
       autoplay: {
