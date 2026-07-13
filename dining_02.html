@@ -107,7 +107,26 @@
                 </div>
                 <!-- gallery -->
                 <div class="gallery_swiper_container">
-                  <div style="display: flex; justify-content: center; align-items: center; text-align: center; background: #ddd; height: 570px">gallery</div>
+                  <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="gallery-swiper-item"><img src="./assets/images/sample_1200x570.png" alt="" /></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-swiper-item"><img src="./assets/images/sample_1200x570_sample2.png" alt="" /></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-swiper-item"><img src="./assets/images/sample_1200x570_sample3.png" alt="" /></div>
+                      </div>
+                    </div>
+                    <div class="swiper-options">
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-scrollbar"></div>
+
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
                 </div>
                 <!-- // gallery -->
               </div>
@@ -409,7 +428,9 @@
         </div>
       </main>
       <script>
-        $(function () {});
+        $(function () {
+          detailGallerySwiper();
+        });
       </script>
       <footer class="footer_section">
         <div class="footer_inner">

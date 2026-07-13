@@ -742,3 +742,59 @@ function detailSwiper() {
     }, 150);
   });
 }
+
+function detailGallerySwiper() {
+  let swiper = null;
+  let currentMode = null;
+
+  function initSwiper() {
+    const isMobile = window.innerWidth <= 767;
+    const mode = isMobile ? "mobile" : "pc";
+
+    if (currentMode === mode) return;
+
+    if (swiper) {
+      swiper.destroy(true, true);
+    }
+
+    currentMode = mode;
+
+    swiper = new Swiper(".gallery-swiper", {
+      speed: 800,
+      loop: isMobile,
+
+      navigation: {
+        nextEl: ".gallery_swiper_container .swiper-button-next",
+        prevEl: ".gallery_swiper_container .swiper-button-prev",
+      },
+
+      pagination: {
+        el: ".gallery_swiper_container .swiper-pagination",
+        clickable: true,
+        enabled: isMobile,
+      },
+
+      scrollbar: {
+        el: ".gallery_swiper_container .swiper-scrollbar",
+        draggable: true,
+        enabled: !isMobile,
+      },
+
+      mousewheel: {
+        enabled: !isMobile,
+        forceToAxis: true,
+        releaseOnEdges: true,
+      },
+
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
+  }
+
+  initSwiper();
+
+  window.addEventListener("resize", initSwiper);
+}
