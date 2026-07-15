@@ -193,8 +193,8 @@
 .card_item:hover .img_row > img.card_thumb_img{ transform: scale(1.4);}
 .card_item .spec_row{margin-top:16px;}
 
-.card_item .flag_row{margin:18px 0 16px; display:flex; flex-wrap:wrap; gap:4px;}
-.flag_stamp_box{height:28px; line-height:28px; border:1px solid #D6D6D6; border-radius: 4px; white-space: nowrap; display:inline-block; padding:0 6px; box-sizing: border-box; color:#3E3E3E; font-size:16px; letter-spacing: -0.04em;}
+.card_item .flag_row{margin:16px 0 12px; display:flex; flex-wrap:wrap; gap:4px;}
+.flag_stamp_box{height:22px; line-height:20px; border:1px solid #D6D6D6; border-radius: 4px; white-space: nowrap; display:inline-block; padding:0 4px; box-sizing: border-box; color:#3E3E3E; font-size:12px; letter-spacing: -0.04em;}
 .flag_stamp_box.highlight{color:#3A43BB; background-color:#E8EAF8; border-color:#E8EAF8;}
 
 
