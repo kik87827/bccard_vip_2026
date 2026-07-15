@@ -116,7 +116,7 @@
   .toplogo_else_text{top:0;}
   .header_desktop_menu_cols{display:none;}
   .btn_head_link{display:inline-block;}
-  .middle_contents{padding:0 20px;}
+  .middle_contents{padding:0 20px; position:relative; overflow-x:hidden;}
   .footer_main_row{display:none;}
   .footer_inner{padding:24px 20px 40px;}
   .footer_copy_row{margin-top:0; align-items: flex-end;}
