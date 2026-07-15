@@ -300,7 +300,7 @@
 
 /* combo */
 .combo_select_item{position:relative; box-sizing: border-box;}
-.combo_select_current{display:flex; justify-content: space-between; border:1px solid #D6D6D6; border-radius: 6px; align-items: center; gap:8px; padding:12px 16px; min-height:47px; box-sizing: border-box; text-align: left;}
+.combo_select_current{display:flex; justify-content: space-between; border:1px solid #D6D6D6; border-radius: 6px; align-items: center; gap:8px; padding:12px 14px; min-height:47px; box-sizing: border-box; text-align: left;}
 .combo_select_current .text_node{font-size:15px; color:#555555; letter-spacing: -0.1px; white-space: nowrap;}
 .combo_select_current:after{display:block; content:'';width:16px; height:16px; background:url("../images/ico_select.png") no-repeat 0 0/16px auto;}
 
@@ -317,9 +317,9 @@
 .combo_option_list{padding:8px 0;overflow:hidden;overflow-y:auto;box-sizing: border-box; position:relative;}
 .combo_option_list > li{}
 .combo_option_list > li:last-of-type{}
-.combo_option{display:flex; flex-direction: column; justify-content: center; padding:6px 16px; color:#555555; font-size:15px; min-height:35px; box-sizing: border-box; }
-.combo_option:hover,
-.combo_option.active{font-weight:700; color:#151515; background:#FAFAFA;}
+.combo_option{display:flex; flex-direction: column; justify-content: center; padding:6px 14px; color:#555555; font-size:15px; min-height:35px; box-sizing: border-box; letter-spacing: -0.04em;}
+.combo_option:hover{color:#151515; background:#FAFAFA; font-weight:700;}
+.combo_option.active{font-weight:600; color:#151515;}
 .combo_option_wrap {
   display: none;
 }
