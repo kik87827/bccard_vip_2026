@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+    <link href="./assets/css/swiper.min.css" rel="stylesheet" />
+    <link href="./assets/css/components.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/ui.js"></script>
+    <title></title>
+  </head>
+  <body class="front_body">
+    <div class="page_wrap">
+      <header class="header_section">
+        <div class="header_inner">
+          <!-- 260715 mb_hidden 추가 -->
+          <div class="header_logo_cols mb_hidden">
+            <h1 class="header_toplogo">
+              <a href="#" class="toplogo_link">
+                <div class="toplogo_img"><img src="./assets/images/toplogo.png" alt="" /></div>
+                <span class="toplogo_else_text">VIP DINING</span>
+              </a>
+            </h1>
+          </div>
+          <!-- 260715 삭제 <div class="header_desktop_menu_cols">
+            <nav class="desktop_nav_wrap">
+              <ul class="desktop_nav_list">
+                <li><a href="#" class="desktop_nav_item">메뉴 1</a></li>
+                <li><a href="#" class="desktop_nav_item">메뉴 2</a></li>
+                <li><a href="#" class="desktop_nav_item">메뉴 3</a></li>
+              </ul>
+            </nav>
+            <div class="desktop_util_wrap">
+              <ul class="desktop_util_list">
+                <li><a href="#" class="destop_util_item">로그아웃</a></li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+        <a href="#" class="btn_head_link shape_back"></a>
+        <!-- 260715 삭제 <a href="#" class="btn_head_link shape_menu"></a> -->
+        <!-- mobile -->
+        <!-- 260715 삭제 <div class="mobile_panel_zone" id="mobile_gnb">
+          <div class="mobile_panel_dim"></div>
+          <div class="mobile_panel_wrap">
+            <div class="mbutil_row">
+              <div class="mbutil_define_row">
+                <span class="who">김지아</span>
+                <span class="who_else">님 반갑습니다.</span>
+              </div>
+            </div>
+            <div class="mbmenu_row">
+              <div class="mbmenu_inwrap">
+                <ul class="mbmenu_vlist">
+                  <li name="gnb_app">
+                    <a href="#" class="mbmenu_one">모바일 메뉴 1</a>
+                  </li>
+                  <li name="gnb_history">
+                    <a href="#" class="mbmenu_one">모바일 메뉴 2</a>
+                  </li>
+                  <li name="gnb_notice">
+                    <a href="#" class="mbmenu_one">모바일 메뉴 3</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="btn_mbmenuclose"><span class="hdtext">메인메뉴 닫기</span></a>
+          </div>
+        </div> -->
+        <!-- // mobile -->
+      </header>
+      <main class="middle_section">
+        <div class="key_visual_wrap type2">
+          <div class="key_bg pc" style="background-image: url(./assets/images/kv2_pc.jpg)"></div>
+          <div class="key_bg mb" style="background-image: url(./assets/images/kv2_mb.jpg)"></div>
+          <div class="key_vcopy_wrap">
+            <p class="key_vcopy_main type2">내추럴 8 스파이 파티룸</p>
+            <p class="key_vcopy_sub type2">
+              클래식하고 프라이빗한 분위기 속
+              <br class="mb_br" />
+              다양한 종류의 위스키를 즐길 수 있는 공간
+            </p>
+          </div>
+          <div class="key_bread_layer_wrap">
+            <ul class="key_bread_list">
+              <!-- <li><a href="#" class="key_bread_item">홈</a></li> -->
+              <li><a href="#" class="key_bread_item">다이닝</a></li>
+              <li><a href="#" class="key_bread_item highlight">내추럴 8 스파이 파티룸</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="middle_contents">
+          <div class="detail_ui_group">
+            <div class="detail_middle_block">
+              <div class="detail_mid_title_row">
+                <h3 class="detail_mid_title">갤러리</h3>
+              </div>
+              <div class="detail_mid_contents">
+                <div class="detail_mid_copy">
+                  내추럴 8 스파이 파티룸은 클래식하고 프라이빗한 분위기 속에서 다양한 종류의 위스키, 칵테일 등 주류와 페어링 요리를 즐길 수 있는 공간입니다.
+                  <br />
+                  다양한 콘셉트의 파티룸으로 특별한 날을 위한 프라이빗 이벤트 장소로도 활용 가능합니다.
+                </div>
+                <!-- gallery -->
+                <div class="gallery_swiper_container">
+                  <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="gallery-swiper-item"><img src="./assets/images/sample_1200x570.png" alt="" /></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-swiper-item"><img src="./assets/images/sample_1200x570_sample2.png" alt="" /></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-swiper-item"><img src="./assets/images/sample_1200x570_sample3.png" alt="" /></div>
+                      </div>
+                    </div>
+                    <div class="swiper-options">
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-scrollbar"></div>
+
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // gallery -->
+              </div>
+            </div>
+            <div class="detail_middle_block">
+              <div class="detail_mid_title_row">
+                <h3 class="detail_mid_title">이용안내</h3>
+              </div>
+              <div class="detail_mid_contents">
+                <div class="detail_look_wrap">
+                  <ul class="detail_look_list">
+                    <li>
+                      <div class="detail_cell define_th"><span class="detail_key_node">영업시간</span></div>
+                      <div class="detail_cell define_td">
+                        <p class="detail_data_node">12:00 - 23:00</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="detail_cell define_th"><span class="detail_key_node">주소 · 문의</span></div>
+                      <div class="detail_cell define_td">
+                        <ul class="map_info_wrap">
+                          <li>
+                            <div class="map_info_item">
+                              <p class="map_info_para">강남점</p>
+                              <div class="map_each_container">
+                                <div class="liquid">
+                                  <ul class="map_slice_list">
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_marker"></i>
+                                        <span class="text_node">서울특별시 서초구 서초동 1317-31 세계빌딩 1층</span>
+                                        <div class="btn_cell">
+                                          <a href="javascript:;" class="btn_text">지도연결</a>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_call"></i>
+                                        <span class="text_node">0507-1475-6673</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <!--  <div class="auto"><a href="#" class="btn_rolebox">지도연결</a></div> -->
+                              </div>
+                            </div>
+                          </li>
+                          <!-- <li>
+                            <div class="map_info_item">
+                              <p class="map_info_para">명동점</p>
+                              <div class="map_each_container">
+                                <div class="liquid">
+                                  <ul class="map_slice_list">
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_marker"></i>
+                                        <span class="text_node">서울특별시 중구 명동1가 59-1</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_call"></i>
+                                        <span class="text_node">0507-1371-4566</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="auto"><a href="#" class="btn_rolebox">지도연결</a></div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="map_info_item">
+                              <p class="map_info_para">대림점</p>
+                              <div class="map_each_container">
+                                <div class="liquid">
+                                  <ul class="map_slice_list">
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_marker"></i>
+                                        <span class="text_node">서울특별시 영등포구 대림동 714-4 201호</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_call"></i>
+                                        <span class="text_node">0507-1471-2348</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="auto"><a href="#" class="btn_rolebox">지도연결</a></div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="map_info_item">
+                              <p class="map_info_para">건대점</p>
+                              <div class="map_each_container">
+                                <div class="liquid">
+                                  <ul class="map_slice_list">
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_marker"></i>
+                                        <span class="text_node">서울특별시 광진구 자양동 5-13 2층</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_call"></i>
+                                        <span class="text_node">0507-1377-8826</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="auto"><a href="#" class="btn_rolebox">지도연결</a></div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="map_info_item">
+                              <p class="map_info_para">홍대점</p>
+                              <div class="map_each_container">
+                                <div class="liquid">
+                                  <ul class="map_slice_list">
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_marker"></i>
+                                        <span class="text_node">서울특별시 마포구 동교동 166-14 와이즈파크 3층</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_call"></i>
+                                        <span class="text_node">02-6010-3366</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="auto"><a href="#" class="btn_rolebox">지도연결</a></div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="map_info_item">
+                              <p class="map_info_para">대전점</p>
+                              <div class="map_each_container">
+                                <div class="liquid">
+                                  <ul class="map_slice_list">
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_marker"></i>
+                                        <span class="text_node">대전광역시 서구 둔산동 986 2층 1호</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_call"></i>
+                                        <span class="text_node">010-2081-6670</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="auto"><a href="#" class="btn_rolebox">지도연결</a></div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="map_info_item">
+                              <p class="map_info_para">제주점</p>
+                              <div class="map_each_container">
+                                <div class="liquid">
+                                  <ul class="map_slice_list">
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_marker"></i>
+                                        <span class="text_node">제주특별자치도 제주시 노형동 929-11 1층</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="map_slice_item">
+                                        <i class="ico shape_call"></i>
+                                        <span class="text_node">0507-1393-2927</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="auto"><a href="#" class="btn_rolebox">지도연결</a></div>
+                              </div>
+                            </div>
+                          </li> -->
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="detail_cell define_th"><span class="detail_key_node">혜택</span></div>
+                      <div class="detail_cell define_td">
+                        <div class="emphasis_frame">
+                          <i class="ico shape_import"></i>
+                          <p class="emphasis_para">BC VIP 회원에게 10% 할인</p>
+                        </div>
+                        <ul class="bullet_list shape_dot">
+                          <li>음료 및 주류 할인 제외</li>
+                          <li>타 쿠폰 및 혜택과 중복 적용 불가</li>
+                        </ul>
+                        <!-- <p class="detail_data_node highlight_blue">BC VIP 회원에게 10% 할인</p>
+                        <ul class="indent_para_list highlight_blue">
+                          <li>
+                            <span class="indent_bullet">※</span>
+                            <p class="indent_para">음료 및 주류 할인 제외</p>
+                          </li>
+                          <li>
+                            <span class="indent_bullet">※</span>
+                            <p class="indent_para">타 쿠폰 및 혜택과 중복 적용 불가</p>
+                          </li>
+                        </ul> -->
+                      </div>
+                    </li>
+                    <li>
+                      <div class="detail_cell define_th"><span class="detail_key_node">대상카드</span></div>
+                      <div class="detail_cell define_td">
+                        <div class="card_plate_wrap">
+                          <ul class="card_plate_list">
+                            <li>
+                              <a href="#" class="card_plate_item">
+                                <div class="img_cols"><img src="./assets/images/card_plate_01.png" alt="" /></div>
+                                <div class="spec_cols">
+                                  <p class="card_plate_name">인피니트 카드</p>
+                                  <p class="card_plate_info">자세히 보기</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="card_plate_item">
+                                <div class="img_cols"><img src="./assets/images/card_plate_02.png" alt="" /></div>
+                                <div class="spec_cols">
+                                  <p class="card_plate_name">다이아몬드 카드</p>
+                                  <p class="card_plate_info">자세히 보기</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="card_plate_item">
+                                <div class="img_cols"><img src="./assets/images/card_plate_03.png" alt="" /></div>
+                                <div class="spec_cols">
+                                  <p class="card_plate_name">시그니처 카드</p>
+                                  <p class="card_plate_info">자세히 보기</p>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="card_plate_item">
+                                <div class="img_cols"><img src="./assets/images/card_plate_04.png" alt="" /></div>
+                                <div class="spec_cols">
+                                  <p class="card_plate_name">플래티늄 카드</p>
+                                  <p class="card_plate_info">자세히 보기</p>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="btn_bottom_block">
+                  <a href="#" class="btn_card"><span class="text_node">목록</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_note_wrap">
+            <div class="info_note_inner">
+              <div class="info_note_title_row">
+                <h3 class="info_note_title">유의사항</h3>
+              </div>
+              <!-- 260711 수정 -->
+              <div class="info_note_contents">
+                <ul class="bullet_list shape_dot">
+                  <li>
+                    VIP카드 회원님을 위한 특별한 가맹점, 다이닝클럽입니다. 가맹점에서
+                    <strong class="color_highlight">VIP카드로 결제 시 10%~20%의 할인 혜택</strong>
+                    을 드립니다.
+                    <ul class="bullet_list shape_dash">
+                      <li>e-플래티늄, BLISS, 블루다이아몬드, 로얄블루, REX 등 은행특화 카드는 서비스가 제공되지 않습니다.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong class="color_highlight">타 쿠폰 사용 및 가맹점 자체 할인 행사 시</strong>
+                     Dining Club에서 제공하는 10% 할인과 중복 적용되지 않습니다.
+                  </li>
+                  <li>다이닝클럽 고객센터: 02-540-6445(운영시간: 평일 09:00~18:00, 점심시간 12:00~13:00 주말&공휴일 휴무)</li>
+                </ul>
+              </div>
+              <!-- // 260711 수정 -->
+            </div>
+          </div>
+        </div>
+      </main>
+      <script>
+        $(function () {
+          detailGallerySwiper();
+        });
+      </script>
+      <footer class="footer_section">
+        <div class="footer_inner">
+          <div class="footer_main_row">
+            <span class="footer_logo"><img src="./assets/images/bottomlogo.png" alt="BCcard" /></span>
+            <div class="footer_info_cols">
+              <ul class="footer_drop_list">
+                <li>
+                  <div class="drop_box_item">
+                    <button class="drop_event_target">
+                      <span class="text_node">VIP 전용 상담 데스크</span>
+                      <i class="ico"></i>
+                    </button>
+                    <div class="drop_option_layer">
+                      <ul class="drop_option_list">
+                        <li><a href="#" class="drop_option">데스트 1</a></li>
+                        <li><a href="#" class="drop_option">데스트 2</a></li>
+                        <li><a href="#" class="drop_option">데스트 3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="drop_box_item">
+                    <button class="drop_event_target">
+                      <span class="text_node">Family site</span>
+                      <i class="ico"></i>
+                    </button>
+                    <div class="drop_option_layer">
+                      <ul class="drop_option_list">
+                        <li><a href="#" class="drop_option">Family 1</a></li>
+                        <li><a href="#" class="drop_option">Family 2</a></li>
+                        <li><a href="#" class="drop_option">Family 3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_copy_row">
+            <div class="footer_copy_main_cols">
+              <ul class="footer_link_list">
+                <li><a href="#" class="footer_link highlight">개인정보처리방침</a></li>
+                <li><a href="#" class="footer_link">고객권리안내문</a></li>
+                <li><a href="#" class="footer_link">상품공시실</a></li>
+                <li><a href="#" class="footer_link">이용약관</a></li>
+                <li><a href="#" class="footer_link">이메일주소무단수집금지</a></li>
+                <li><a href="#" class="footer_link">전자민원접수</a></li>
+                <li><a href="#" class="footer_link">윤리경영</a></li>
+              </ul>
+              <div class="footer_article_wrap">
+                <button class="footer_article_target">
+                  <span class="text_node">사업자 정보</span>
+                  <i class="ico"></i>
+                </button>
+                <div class="footer_article_content">
+                  <ul class="footer_copy_list">
+                    <li><a href="#" class="footer_copy">서울시 중구 을지로 170 비씨카드(주) 대표이사 김영우</a></li>
+                    <li><a href="#" class="footer_copy">사업자번호 214-81-37726</a></li>
+                    <li><a href="#" class="footer_copy">통신판매업 신고번호 제2019-서울중구-2167호</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer_copy_sub_cols">
+              <button class="btn_topgo"></button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
