@@ -798,3 +798,66 @@ function detailGallerySwiper() {
 
   window.addEventListener("resize", initSwiper);
 }
+
+function detailPhotoSwiper() {
+  if ($(".detail_photo").find(".swiper-slide").length <= 1) {
+    $(".detail_photo_container").addClass("one_type");
+    return;
+  }
+  let detailPhotoSwiper = new Swiper(".detail_photo", {
+    speed: 800,
+
+    // rewind: true,
+
+    spaceBetween: 4,
+
+    breakpoints: {
+      0: {
+        spaceBetween: 2,
+      },
+      767: {
+        spaceBetween: 4,
+      },
+    },
+
+    navigation: {
+      nextEl: ".detail_photo_container .swiper-button-next",
+      prevEl: ".detail_photo_container .swiper-button-prev",
+    },
+
+    pagination: {
+      el: ".detail_photo_container .swiper-fraction",
+      type: "fraction",
+      renderFraction: function (currentClass, totalClass) {
+        return `
+          <span class="${currentClass}"></span>
+          <span class="swiper-pagination-part">/</span>
+          <span class="${totalClass}"></span>
+        `;
+      },
+    },
+
+    scrollbar: {
+      el: ".detail_photo_container .swiper-scrollbar",
+      draggable: true,
+      enabled: true,
+    },
+
+    freeMode: {
+      enabled: true,
+      sticky: false,
+      momentum: true,
+    },
+    /* 
+    mousewheel: {
+      enabled: true,
+      releaseOnEdges: true,
+    }, */
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+  });
+}

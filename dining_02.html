@@ -218,10 +218,48 @@
               <div class="detail_middle_block dp_panel">
                 <div class="dp_key_cols"><h3 class="detail_mid_title">갤러리</h3></div>
                 <div class="dp_value_cols">
-                  <div style="display: flex; height: 420px; justify-content: center; align-items: center; background: #ddd; font-size: 20px">갤러리</div>
+                  <!-- gallery -->
+                  <div class="detail_photo_container">
+                    <div class="swiper detail_photo">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="photo_swiper_item"><img src="./assets/images/sample_1200x570.png" alt="" /></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="photo_swiper_item"><img src="./assets/images/sample_1200x570_sample2.png" alt="" /></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="photo_swiper_item"><img src="./assets/images/sample_1200x570_sample3.png" alt="" /></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="photo_swiper_item"><img src="./assets/images/sample_1200x570.png" alt="" /></div>
+                        </div>
+                      </div>
+                      <div class="swiper-options type-section">
+                        <div class="swiper-sf-group">
+                          <div class="swiper-scrollbar"></div>
+                          <div class="swiper-fraction">
+                            <span class="swiper-pagination-current">0</span>
+                            <span class="swiper-pagination-part">/</span>
+                            <span class="swiper-pagination-total">0</span>
+                          </div>
+                        </div>
+                        <div class="swiper-navi-group">
+                          <button type="button" class="swiper-button-prev"></button>
+                          <button type="button" class="swiper-button-next"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    $(function () {
+                      detailPhotoSwiper();
+                    });
+                  </script>
+                  <!-- // gallery -->
                 </div>
               </div>
-              <div class="detail_middle_block">
+              <div class="detail_middle_block else_gap">
                 <div class="detail_mid_title_row type2">
                   <h3 class="detail_mid_title">유의사항</h3>
                 </div>
