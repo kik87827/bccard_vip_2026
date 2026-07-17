@@ -843,11 +843,11 @@ function detailPhotoSwiper() {
       enabled: true,
     },
 
-    freeMode: {
+    /* freeMode: {
       enabled: true,
       sticky: false,
       momentum: true,
-    },
+    }, */
     /* 
     mousewheel: {
       enabled: true,
